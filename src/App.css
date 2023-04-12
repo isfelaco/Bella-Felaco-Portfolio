@@ -22,19 +22,6 @@ html {
 	scroll-padding-top: 175px;
 }
 
-.linkRow {
-	display: flex;
-	flex-direction: row;
-	gap: 20px;
-	justify-content: center;
-	margin: 0;
-}
-a {
-	font-size: 20px;
-	color: #aa4586;
-	text-decoration: none;
-}
-
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
@@ -74,24 +61,6 @@ a {
 .right {
 	flex: 40%;
 	justify-content: center;
-}
-
-ul {
-	/* bullet style*/
-	list-style-type: none;
 	text-align: left;
-
-	/* layout */
-	display: flex;
-	flex-direction: column;
 	gap: 50px;
-}
-li {
-	font-size: 75px;
-	font-weight: bold;
-	letter-spacing: 3px;
-	animation: fadeIn 3s;
-}
-li:hover {
-	font-style: italic;
 }

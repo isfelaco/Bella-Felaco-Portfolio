@@ -8,6 +8,8 @@ const Link = styled(NavLink)`
 	font-weight: bold;
 	letter-spacing: 3px;
 	animation: fadeIn 3s;
+	color: #aa4586;
+	text-decoration: none;
 
 	&:hover {
 		font-style: italic;
@@ -17,40 +19,17 @@ const Link = styled(NavLink)`
 export function NavBar() {
 	return (
 		<nav className="column right">
-			<ul>
-				<li>
-					<Link className="navbar-item" to="/about">
-						About
-					</Link>
-				</li>
-				<li>
-					<Link className="navbar-item" to="/experience">
-						Experience
-					</Link>
-				</li>
-				<li>
-					<Link className="navbar-item" to="/projects">
-						Projects
-					</Link>
-				</li>
-			</ul>
+			<Link className="navbar-item" to="/about">
+				About
+			</Link>
+
+			<Link className="navbar-item" to="/experience">
+				Experience
+			</Link>
+
+			<Link className="navbar-item" to="/projects">
+				Projects
+			</Link>
 		</nav>
 	);
 }
-
-/* <div className="row">
-					<div className="column left">
-						<p className="title">Bella Felaco</p>
-					</div>
-					<ul className="column right">
-						<a href="#about">
-							<li>About</li>
-						</a>
-						<a href="#experience">
-							<li>Experience</li>
-						</a>
-						<a href="#projects">
-							<li>Projects</li>
-						</a>
-					</ul>
-				</div> */

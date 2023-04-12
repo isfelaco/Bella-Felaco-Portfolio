@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { NavBar } from "./NavBar";
 import { Section } from "./Section";
-import logo from "./UVA-logo.png";
+// import logo from "./UVA-logo.png";
 
 export function App() {
 	return (
@@ -25,20 +25,3 @@ export function App() {
 		</div>
 	);
 }
-
-/* <div className="row">
-					<div className="column left">
-						<p className="title">Bella Felaco</p>
-					</div>
-					<ul className="column right">
-						<a href="#about">
-							<li>About</li>
-						</a>
-						<a href="#experience">
-							<li>Experience</li>
-						</a>
-						<a href="#projects">
-							<li>Projects</li>
-						</a>
-					</ul>
-				</div> */
