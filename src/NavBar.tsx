@@ -8,7 +8,7 @@ const Link = styled(NavLink)`
 	font-weight: bold;
 	letter-spacing: 3px;
 	animation: fadeIn 3s;
-	color: #aa4586;
+	color: #a4778b;
 	text-decoration: none;
 
 	&:hover {

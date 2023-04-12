@@ -47,7 +47,6 @@ html {
 .title {
 	/* text */
 	color: #aa4586;
-	-webkit-text-stroke: 1px white;
 	font-size: 75px;
 	font-style: italic;
 	font-weight: bold;
@@ -56,6 +55,7 @@ html {
 	margin-top: -100px;
 	background: rgb(255, 255, 255, 0.3);
 	border-radius: 0px 50px 50px 0px;
+	width: 90%;
 }
 
 .right {
