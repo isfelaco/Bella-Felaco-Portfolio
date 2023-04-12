@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import "./css/Section.css";
+import "./css/App.css";
 
 type Props = {
 	title: string;
@@ -10,7 +10,7 @@ export function Section(props: Props) {
 	const { title, children } = props;
 	return (
 		<div className="section">
-			<p className="title">{title}</p>
+			<p className="pageTitle">{title}</p>
 			{children}
 		</div>
 	);

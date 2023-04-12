@@ -42,3 +42,24 @@ html {
 	text-align: left;
 	gap: 50px;
 }
+
+.section {
+	/* layout */
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	margin: 25px;
+
+	animation: fadeIn 3s;
+}
+
+.pageTitle {
+	margin: 0px;
+	color: #a4778b;
+	font-size: 50px;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: rgb(255, 255, 255, 0.3);
+	border-radius: 5px;
+	border: 1px solid #a9ffcb;
+}

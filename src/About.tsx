@@ -1,18 +1,20 @@
 import React from "react";
 import { Section } from "./Section";
 import styled from "styled-components";
-import { Column, Row } from "./App";
+import { Row } from "./App";
 
-const AboutColumn = styled(Column)`
+const Column = styled.div`
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	background: rgb(255, 255, 255, 0.3);
 	border: 1px solid #a9ffcb;
 	border-radius: 5px;
 `;
-const LeftColumn = styled(AboutColumn)`
+const LeftColumn = styled(Column)`
 	flex: 40%;
 `;
-const RightColumn = styled(AboutColumn)`
+const RightColumn = styled(Column)`
 	flex: 60%;
 `;
 

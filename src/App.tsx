@@ -10,9 +10,11 @@ export const Row = styled.div`
 	height: 100%;
 	gap: 100px;
 `;
-export const Column = styled.div`
+export const ColumnLeft = styled.div`
 	display: flex;
 	flex-direction: column;
+	flex: 60%;
+	justify-content: center;
 
 	.title {
 		/* text */
@@ -26,10 +28,6 @@ export const Column = styled.div`
 		background: rgb(255, 255, 255, 0.3);
 		border-radius: 0px 50px 50px 0px;
 	}
-`;
-const ColumnLeft = styled(Column)`
-	flex: 60%;
-	justify-content: center;
 `;
 
 export function App() {
