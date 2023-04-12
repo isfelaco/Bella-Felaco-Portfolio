@@ -44,7 +44,7 @@ html {
 	flex: 60%;
 	justify-content: center;
 }
-.title {
+.column .title {
 	/* text */
 	color: #aa4586;
 	font-size: 75px;
