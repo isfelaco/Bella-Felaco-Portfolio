@@ -4,15 +4,13 @@
 }
 
 .App {
-	/* background-color: #f7986f; */
 	background-image: url(background.avif);
+	background-size: cover;
 
 	/* layout */
 	display: flex;
 	flex-direction: column;
-	/* gap: 35px; */
-	min-height: 100vh;
-	background-size: cover;
+	height: 100vh;
 
 	/* font */
 	font-family: myFirstFont;
@@ -22,33 +20,6 @@
 html {
 	scroll-behavior: smooth;
 	scroll-padding-top: 175px;
-}
-
-h1,
-h2 {
-	color: #0d1f2d;
-}
-h3 {
-	color: #546a7b;
-}
-
-.header {
-	/* box styling */
-	background-color: #b6eea6;
-	border-bottom: 2.5px solid #0d1f2d;
-
-	/* layout */
-	display: flex;
-	flex-direction: column;
-	padding: 10px;
-	gap: 10px;
-	position: sticky;
-	top: 0;
-	height: fit-content;
-}
-.header .title {
-	margin: 0;
-	padding: 0;
 }
 
 .linkRow {
@@ -61,7 +32,7 @@ h3 {
 a {
 	font-size: 20px;
 	color: #aa4586;
-	/* -webkit-text-stroke: 0.5px black; */
+	text-decoration: none;
 }
 
 @keyframes fadeIn {
@@ -75,93 +46,52 @@ a {
 
 .row {
 	display: flex;
+	height: fill;
 }
-
 .column {
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
-	/* border: 1px solid black; */
 }
+
 .left {
 	flex: 60%;
 	justify-content: center;
 }
+.title {
+	/* text */
+	color: #aa4586;
+	-webkit-text-stroke: 1px white;
+	font-size: 75px;
+	font-style: italic;
+	font-weight: bold;
+
+	/* layout */
+	margin-top: -100px;
+	background: rgb(255, 255, 255, 0.3);
+	border-radius: 0px 50px 50px 0px;
+}
+
 .right {
 	flex: 40%;
 	justify-content: center;
 }
 
 ul {
+	/* bullet style*/
 	list-style-type: none;
 	text-align: left;
-	/* margin-top: 100px; */
-	justify-self: center;
+
+	/* layout */
+	display: flex;
+	flex-direction: column;
 	gap: 50px;
-	align-items: space-between;
 }
 li {
 	font-size: 75px;
 	font-weight: bold;
-	letter-spacing: 1px;
-}
-li:not(:last-child) {
-	margin-bottom: 50px;
-}
-li:hover {
-	/* font-size: 100px; */
-	font-style: italic;
-}
-
-.section {
-	/* layout */
-	display: flex;
-	flex-direction: column;
-	gap: 25px;
-	padding: 25px;
-	margin: 25px;
-
-	/* styling */
-	background-color: #a4778b;
-	border-radius: 5px;
-	border: 1px solid #0d1f2d;
+	letter-spacing: 3px;
 	animation: fadeIn 3s;
 }
-.section .title {
-	background-color: #b6eea6;
-	border: 0.5px solid #0d1f2d;
-	border-radius: 5px;
-	padding: 10px;
-	width: fill;
-	margin: 0px;
-}
-
-.subsection {
-	/* layout */
-	display: flex-box;
-	flex-direction: column;
-	padding: 10px;
-	width: fill;
-
-	/* styling */
-	background-color: white;
-	border: 0.5px solid #0d1f2d;
-	border-radius: 5px;
-}
-
-.education {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 10px;
-	margin-top: 10px;
-}
-
-p.education {
-	margin: 0px;
-}
-
-.UVA-logo {
-	height: 10vmin;
-	pointer-events: none;
+li:hover {
+	font-style: italic;
 }

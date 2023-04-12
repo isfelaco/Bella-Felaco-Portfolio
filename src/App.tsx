@@ -25,14 +25,20 @@ export function App() {
 				</div>
 			</nav> */}
 			<div className="row">
-				<div className="column left">Bella Felaco's Porfolio</div>
-				<div className="column right">
-					<ul>
-						<li>About</li>
-						<li>Experience</li>
-						<li>Projects</li>
-					</ul>
+				<div className="column left">
+					<p className="title">Bella Felaco</p>
 				</div>
+				<ul className="column right">
+					<a href="#about">
+						<li>About</li>
+					</a>
+					<a href="#experience">
+						<li>Experience</li>
+					</a>
+					<a href="#projects">
+						<li>Projects</li>
+					</a>
+				</ul>
 			</div>
 
 			{/* <Section title="Education" id="education">
