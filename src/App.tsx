@@ -17,9 +17,9 @@ export function App() {
 				</div>
 
 				<Routes>
-					<Route path="/hi" element={<Section title="hi" />} />
-					{/* <Route path="/shop" element={<Shop />} /> */}
-					{/* <Route path="/signin" element={<Signin />} /> */}
+					<Route path="/about" element={<Section title="about" />} />
+					<Route path="/experience" element={<Section title="experience" />} />
+					<Route path="/projects" element={<Section title="projects" />} />
 				</Routes>
 			</BrowserRouter>
 		</div>

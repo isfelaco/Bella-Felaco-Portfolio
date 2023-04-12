@@ -1,25 +1,37 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./App.css";
+import styled from "styled-components";
+
+const Link = styled(NavLink)`
+	font-size: 75px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	animation: fadeIn 3s;
+
+	&:hover {
+		font-style: italic;
+	}
+`;
 
 export function NavBar() {
 	return (
 		<nav className="column right">
 			<ul>
 				<li>
-					<NavLink className="navbar-item" to="/about">
+					<Link className="navbar-item" to="/about">
 						About
-					</NavLink>
+					</Link>
 				</li>
 				<li>
-					<NavLink className="navbar-item" to="/experience">
+					<Link className="navbar-item" to="/experience">
 						Experience
-					</NavLink>
+					</Link>
 				</li>
 				<li>
-					<NavLink className="navbar-item" to="/projects">
+					<Link className="navbar-item" to="/projects">
 						Projects
-					</NavLink>
+					</Link>
 				</li>
 			</ul>
 		</nav>
