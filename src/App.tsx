@@ -24,24 +24,18 @@ export function App() {
 					<a href="#experience">Experience</a>
 				</div>
 			</nav>
-			<Section title="hi" content="bye" />
-			<div id="education" className="section">
-				<h1 className="title">Education</h1>
+			<Section title="Education" content="bye" id="education">
+				{/* <img src={logo} className="UVA-logo" alt="logo" /> */}
 				<div className="subsection">
-					{/* <img src={logo} className="UVA-logo" alt="logo" /> */}
-					<div className="education">
-						<p className="education">
-							University of Virginia, Charlottesville, VA
-						</p>
-						<i>
-							<p className="education">
-								Bachelor of Science in Computer Science
-							</p>
-						</i>
-					</div>
+					<p className="education">
+						University of Virginia, Charlottesville, VA
+					</p>
+					<i>
+						<p className="education">Bachelor of Science in Computer Science</p>
+					</i>
 				</div>
-				<h2 className="title">Relevant Coursework</h2>
 				<div className="subsection">
+					<h1 className="title">Relevant Coursework</h1>
 					<ul>
 						<li>Program and Data Representation</li>
 						<li>Digital Logic Design</li>
@@ -49,19 +43,17 @@ export function App() {
 						<li>Advanced Software Development Methods</li>
 					</ul>
 				</div>
-			</div>
-			<div id="projects" className="section">
-				<h1 className="title">Projects</h1>
+			</Section>
+			<Section title="Projects" id="projects">
 				<div className="subsection">
 					<ul>
 						<li>Aspirations vs. Reality in Engineering Education</li>
 					</ul>
 				</div>
-			</div>
-			<div id="experience" className="section">
-				<h1 className="title">Experience</h1>
+			</Section>
+			<Section title="Experience" id="experience">
 				<div className="subsection"></div>
-			</div>
+			</Section>
 		</div>
 	);
 }
