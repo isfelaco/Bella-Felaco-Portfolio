@@ -58,7 +58,7 @@ export function Experience() {
 				<div>
 					<Row>
 						<i>
-							Tutor, <b>Uva School of Engineering</b>, Charlottesville, VA
+							Tutor, <b>UVA School of Engineering</b>, Charlottesville, VA
 						</i>
 						September 2021 - May 2022
 					</Row>
@@ -75,13 +75,13 @@ export function Experience() {
 				<div>
 					<Row>
 						<i>
-							Tutor, <b>Uva School of Education, America Reads</b>,
+							Tutor, <b>UVA School of Education, America Reads</b>,
 							Charlottesville, VA
 						</i>
 						September 2021 - May 2022
 					</Row>
 					<Description>
-						Last school year I had the pleasure to work at Walker Upper
+						Last school year I had the pleasure of working at Walker Upper
 						Elementary School in Charlottesville, VA. There I assisted in 5th
 						grade classroom with students of varied learning levels. The class
 						consisted of many non-native English speakers that needed additional
