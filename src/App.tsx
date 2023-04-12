@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { About } from "./About";
 import { NavBar } from "./NavBar";
 import "./css/App.css";
+import { Experience } from "./Experience";
 
 export const Row = styled.div`
 	display: flex;
@@ -47,7 +48,7 @@ export function App() {
 						}
 					/>
 					<Route path="/about" element={<About />} />
-					{/* <Route path="/experience" element={<Section title="Experience" />} /> */}
+					<Route path="/experience" element={<Experience />} />
 					{/* <Route path="/projects" element={<Section title="Projects" />} /> */}
 				</Routes>
 			</BrowserRouter>

@@ -22,11 +22,9 @@ export function NavBar() {
 			<Link className="navbar-item" to="/about">
 				About
 			</Link>
-
 			<Link className="navbar-item" to="/experience">
 				Experience
 			</Link>
-
 			<Link className="navbar-item" to="/projects">
 				Projects
 			</Link>
