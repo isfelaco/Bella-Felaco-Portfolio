@@ -6,9 +6,9 @@ import logo from "./UVA-logo.png";
 export function App() {
 	return (
 		<div className="App">
-			<nav className="header">
+			{/* <nav className="header">
 				<i>
-					<h4 className="title">Bella Felaco's Porfolio</h4>
+					<h2 className="title">Bella Felaco's Porfolio</h2>
 				</i>
 				<div className="linkRow">
 					<a
@@ -23,8 +23,19 @@ export function App() {
 					<a href="#projects">Projects</a>
 					<a href="#experience">Experience</a>
 				</div>
-			</nav>
-			<Section title="Education" id="education">
+			</nav> */}
+			<div className="row">
+				<div className="column left">Bella Felaco's Porfolio</div>
+				<div className="column right">
+					<ul>
+						<li>About</li>
+						<li>Experience</li>
+						<li>Projects</li>
+					</ul>
+				</div>
+			</div>
+
+			{/* <Section title="Education" id="education">
 				<div className="subsection">
 					<img src={logo} className="UVA-logo" alt="logo" />
 					<p className="education">
@@ -53,7 +64,7 @@ export function App() {
 			</Section>
 			<Section title="Experience" id="experience">
 				<div className="subsection"></div>
-			</Section>
+			</Section> */}
 		</div>
 	);
 }
