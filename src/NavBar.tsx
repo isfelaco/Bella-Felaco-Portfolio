@@ -18,7 +18,7 @@ const Link = styled(NavLink)`
 
 export function NavBar() {
 	return (
-		<nav className="column right">
+		<nav className="column navbar">
 			<Link className="navbar-item" to="/about">
 				About
 			</Link>

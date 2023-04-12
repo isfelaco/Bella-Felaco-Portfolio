@@ -31,34 +31,12 @@ html {
 	}
 }
 
-.row {
-	display: flex;
-	height: fill;
-}
 .column {
 	display: flex;
 	flex-direction: column;
 }
 
-.left {
-	flex: 60%;
-	justify-content: center;
-}
-.column .title {
-	/* text */
-	color: #aa4586;
-	font-size: 75px;
-	font-style: italic;
-	font-weight: bold;
-
-	/* layout */
-	margin-top: -100px;
-	background: rgb(255, 255, 255, 0.3);
-	border-radius: 0px 50px 50px 0px;
-	width: 90%;
-}
-
-.right {
+.navbar {
 	flex: 40%;
 	justify-content: center;
 	text-align: left;

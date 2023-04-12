@@ -1,10 +1,36 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import styled from "styled-components";
 import { About } from "./About";
-import "./css/App.css";
 import { NavBar } from "./NavBar";
-import { Section } from "./Section";
-// import logo from "./UVA-logo.png";
+import "./css/App.css";
+
+export const Row = styled.div`
+	display: flex;
+	height: 100%;
+	gap: 100px;
+`;
+export const Column = styled.div`
+	display: flex;
+	flex-direction: column;
+
+	.title {
+		/* text */
+		color: #aa4586;
+		font-size: 75px;
+		font-style: italic;
+		font-weight: bold;
+
+		/* layout */
+		margin-top: -150px;
+		background: rgb(255, 255, 255, 0.3);
+		border-radius: 0px 50px 50px 0px;
+	}
+`;
+const ColumnLeft = styled(Column)`
+	flex: 60%;
+	justify-content: center;
+`;
 
 export function App() {
 	return (
@@ -14,12 +40,12 @@ export function App() {
 					<Route
 						path="/"
 						element={
-							<div className="row">
-								<div className="column left">
+							<Row>
+								<ColumnLeft>
 									<p className="title">Bella Felaco</p>
-								</div>
+								</ColumnLeft>
 								<NavBar />
-							</div>
+							</Row>
 						}
 					/>
 					<Route path="/about" element={<About />} />
