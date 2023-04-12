@@ -1,61 +1,44 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
+import "./App.css";
 
-export default function NavBar() {
-	const [isOpen, setOpen] = useState(false);
+export function NavBar() {
 	return (
-		<nav
-			className="navbar is-primary"
-			role="navigation"
-			aria-label="main navigation"
-		>
-			<div className="container">
-				<div className="navbar-brand">
-					<a
-						role="button"
-						className={`navbar-burger burger ${isOpen && "is-active"}`}
-						aria-label="menu"
-						aria-expanded="false"
-						onClick={() => setOpen(!isOpen)}
-					>
-						<span aria-hidden="true"></span>
-						<span aria-hidden="true"></span>
-						<span aria-hidden="true"></span>
-					</a>
-				</div>
-
-				<div className={`navbar-menu ${isOpen && "is-active"}`}>
-					<div className="navbar-start">
-						<NavLink className="navbar-item" activeClassName="is-active" to="/">
-							Home
-						</NavLink>
-
-						<NavLink
-							className="navbar-item"
-							activeClassName="is-active"
-							to="/about"
-						>
-							About
-						</NavLink>
-
-						<NavLink
-							className="navbar-item"
-							activeClassName="is-active"
-							to="/profile"
-						>
-							Profile
-						</NavLink>
-					</div>
-
-					<div className="navbar-end">
-						<div className="navbar-item">
-							<div className="buttons">
-								<a className="button is-white">Log in</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+		<nav className="column right">
+			<ul>
+				<li>
+					<NavLink className="navbar-item" to="/about">
+						About
+					</NavLink>
+				</li>
+				<li>
+					<NavLink className="navbar-item" to="/experience">
+						Experience
+					</NavLink>
+				</li>
+				<li>
+					<NavLink className="navbar-item" to="/projects">
+						Projects
+					</NavLink>
+				</li>
+			</ul>
 		</nav>
 	);
 }
+
+/* <div className="row">
+					<div className="column left">
+						<p className="title">Bella Felaco</p>
+					</div>
+					<ul className="column right">
+						<a href="#about">
+							<li>About</li>
+						</a>
+						<a href="#experience">
+							<li>Experience</li>
+						</a>
+						<a href="#projects">
+							<li>Projects</li>
+						</a>
+					</ul>
+				</div> */
