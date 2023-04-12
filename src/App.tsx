@@ -1,7 +1,7 @@
-// import logo from "./UVA-logo.png";
-import "./App.css";
 import React from "react";
+import "./App.css";
 import { Section } from "./Section";
+import logo from "./UVA-logo.png";
 
 export function App() {
 	return (
@@ -24,9 +24,9 @@ export function App() {
 					<a href="#experience">Experience</a>
 				</div>
 			</nav>
-			<Section title="Education" content="bye" id="education">
-				{/* <img src={logo} className="UVA-logo" alt="logo" /> */}
+			<Section title="Education" id="education">
 				<div className="subsection">
+					<img src={logo} className="UVA-logo" alt="logo" />
 					<p className="education">
 						University of Virginia, Charlottesville, VA
 					</p>
