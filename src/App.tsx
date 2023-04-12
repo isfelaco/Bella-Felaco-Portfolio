@@ -1,59 +1,58 @@
 import React from "react";
-import "./App.css";
-import { Section } from "./Section";
-import logo from "./UVA-logo.png";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import styled from "styled-components";
+import { About } from "./About";
+import { NavBar } from "./NavBar";
+import "./css/App.css";
+
+export const Row = styled.div`
+	display: flex;
+	height: 100%;
+	gap: 100px;
+`;
+export const Column = styled.div`
+	display: flex;
+	flex-direction: column;
+
+	.title {
+		/* text */
+		color: #aa4586;
+		font-size: 75px;
+		font-style: italic;
+		font-weight: bold;
+
+		/* layout */
+		margin-top: -150px;
+		background: rgb(255, 255, 255, 0.3);
+		border-radius: 0px 50px 50px 0px;
+	}
+`;
+const ColumnLeft = styled(Column)`
+	flex: 60%;
+	justify-content: center;
+`;
 
 export function App() {
 	return (
 		<div className="App">
-			<nav className="header">
-				<i>
-					<h4 className="title">Bella Felaco's Porfolio</h4>
-				</i>
-				<div className="linkRow">
-					<a
-						className="App-link"
-						href="https://linkedin.com/in/isabella-felaco"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						View LinkedIn
-					</a>
-					<a href="#education">Education</a>
-					<a href="#projects">Projects</a>
-					<a href="#experience">Experience</a>
-				</div>
-			</nav>
-			<Section title="Education" id="education">
-				<div className="subsection">
-					<img src={logo} className="UVA-logo" alt="logo" />
-					<p className="education">
-						University of Virginia, Charlottesville, VA
-					</p>
-					<i>
-						<p className="education">Bachelor of Science in Computer Science</p>
-					</i>
-				</div>
-				<div className="subsection">
-					<h1 className="title">Relevant Coursework</h1>
-					<ul>
-						<li>Program and Data Representation</li>
-						<li>Digital Logic Design</li>
-						<li>Linear Algebra</li>
-						<li>Advanced Software Development Methods</li>
-					</ul>
-				</div>
-			</Section>
-			<Section title="Projects" id="projects">
-				<div className="subsection">
-					<ul>
-						<li>Aspirations vs. Reality in Engineering Education</li>
-					</ul>
-				</div>
-			</Section>
-			<Section title="Experience" id="experience">
-				<div className="subsection"></div>
-			</Section>
+			<BrowserRouter>
+				<Routes>
+					<Route
+						path="/"
+						element={
+							<Row>
+								<ColumnLeft>
+									<p className="title">Bella Felaco</p>
+								</ColumnLeft>
+								<NavBar />
+							</Row>
+						}
+					/>
+					<Route path="/about" element={<About />} />
+					{/* <Route path="/experience" element={<Section title="Experience" />} /> */}
+					{/* <Route path="/projects" element={<Section title="Projects" />} /> */}
+				</Routes>
+			</BrowserRouter>
 		</div>
 	);
 }

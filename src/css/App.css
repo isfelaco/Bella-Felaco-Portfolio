@@ -1,0 +1,44 @@
+@font-face {
+	font-family: myFirstFont;
+	src: url(SpaceGrotesk.ttf);
+}
+
+.App {
+	background-image: url(background.avif);
+	background-size: cover;
+
+	/* layout */
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+
+	/* font */
+	font-family: myFirstFont;
+	text-align: center;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 175px;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.navbar {
+	flex: 40%;
+	justify-content: center;
+	text-align: left;
+	gap: 50px;
+}
