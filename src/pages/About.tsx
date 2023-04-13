@@ -1,6 +1,7 @@
 import React from "react";
 import { Section } from "../components/Section";
 import styled from "styled-components";
+import UVAlogo from "../css/UVA-logo.png";
 
 const Row = styled.div`
 	display: flex;
@@ -20,12 +21,18 @@ const LeftColumn = styled(Column)`
 const RightColumn = styled(Column)`
 	flex: 60%;
 `;
+const Image = styled.img`
+	max-width: 100%;
+	height: auto;
+`;
 
 export function About() {
 	return (
 		<Section title="About">
 			<Row>
-				<LeftColumn>headshot here then school logo</LeftColumn>
+				<LeftColumn>
+					<Image src={UVAlogo} alt="logo" />
+				</LeftColumn>
 				<RightColumn>
 					<div>
 						<h1>Contact</h1>
