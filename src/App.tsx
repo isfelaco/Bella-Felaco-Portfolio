@@ -7,7 +7,7 @@ import "./css/App.css";
 import { Experience } from "./pages/Experience";
 import { Projects } from "./pages/Projects";
 
-export const Row = styled.div`
+export const HomePage = styled.div`
 	display: flex;
 	height: 100%;
 	gap: 100px;
@@ -40,12 +40,12 @@ export function App() {
 					<Route
 						path="/"
 						element={
-							<Row>
+							<HomePage>
 								<ColumnLeft>
 									<p className="title">Bella Felaco</p>
 								</ColumnLeft>
 								<NavBar />
-							</Row>
+							</HomePage>
 						}
 					/>
 					<Route path="/about" element={<About />} />

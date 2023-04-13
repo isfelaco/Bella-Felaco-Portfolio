@@ -1,8 +1,11 @@
 import React from "react";
 import { Section } from "../Section";
 import styled from "styled-components";
-import { Row } from "../App";
 
+const Row = styled.div`
+	display: flex;
+	gap: 25px;
+`;
 const Column = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -45,9 +48,6 @@ export function About() {
 					<div></div>
 				</RightColumn>
 			</Row>
-			{/* <Row>
-				<BackButton />
-			</Row> */}
 		</Section>
 	);
 }
