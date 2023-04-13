@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { BackButton } from "./BackButton";
 import "./css/App.css";
 
 type Props = {
@@ -12,6 +13,7 @@ export function Section(props: Props) {
 		<div className="section">
 			<p className="pageTitle">{title}</p>
 			{children}
+			<BackButton />
 		</div>
 	);
 }

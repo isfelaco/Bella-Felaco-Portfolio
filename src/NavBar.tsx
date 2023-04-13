@@ -19,15 +19,9 @@ const Link = styled(NavLink)`
 export function NavBar() {
 	return (
 		<nav className="column navbar">
-			<Link className="navbar-item" to="/about">
-				About
-			</Link>
-			<Link className="navbar-item" to="/experience">
-				Experience
-			</Link>
-			<Link className="navbar-item" to="/projects">
-				Projects
-			</Link>
+			<Link to="/about">About</Link>
+			<Link to="/experience">Experience</Link>
+			<Link to="/projects">Projects</Link>
 		</nav>
 	);
 }

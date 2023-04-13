@@ -2,6 +2,7 @@ import React from "react";
 import { Section } from "./Section";
 import styled from "styled-components";
 import { Row } from "./App";
+import { BackButton } from "./BackButton";
 
 const Column = styled.div`
 	display: flex;
@@ -45,6 +46,9 @@ export function About() {
 					<div></div>
 				</RightColumn>
 			</Row>
+			{/* <Row>
+				<BackButton />
+			</Row> */}
 		</Section>
 	);
 }
