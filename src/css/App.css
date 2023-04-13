@@ -54,12 +54,20 @@ html {
 }
 
 .pageTitle {
-	margin: 0px;
-	color: #a4778b;
+	color: #aa4586;
 	font-size: 50px;
 	font-weight: bold;
 	text-transform: uppercase;
+	letter-spacing: 3px;
+
 	background: rgb(255, 255, 255, 0.3);
 	border-radius: 5px;
-	border: 1px solid #a9ffcb;
+	border: 1px solid white;
+	margin: 0px;
+	transition: 1s;
+}
+
+.pageTitle:hover {
+	letter-spacing: 10px;
+	transition: 0.5s;
 }

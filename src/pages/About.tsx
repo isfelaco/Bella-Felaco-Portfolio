@@ -12,7 +12,7 @@ const Column = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	background: rgb(255, 255, 255, 0.3);
-	border: 1px solid #a9ffcb;
+	border: 1px solid white;
 	border-radius: 5px;
 `;
 const LeftColumn = styled(Column)`
@@ -22,8 +22,15 @@ const RightColumn = styled(Column)`
 	flex: 60%;
 `;
 const Image = styled.img`
-	max-width: 100%;
+	width: 75%;
 	height: auto;
+	transition: 2s;
+	align-self: center;
+
+	&:hover {
+		width: 90%;
+		transition: 1s;
+	}
 `;
 
 export function About() {

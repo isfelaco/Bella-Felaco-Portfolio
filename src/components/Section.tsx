@@ -13,7 +13,9 @@ export function Section(props: Props) {
 		<div className="section">
 			<p className="pageTitle">{title}</p>
 			{children}
-			<BackButton />
+			<div>
+				<BackButton />
+			</div>
 		</div>
 	);
 }
