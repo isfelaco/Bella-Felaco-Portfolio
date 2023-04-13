@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { BackButton } from "./BackButton";
+import { BackButton } from "./components/BackButton";
 import "./css/App.css";
 
 type Props = {

@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
-import { About } from "./About";
+import { About } from "./pages/About";
 import { NavBar } from "./NavBar";
 import "./css/App.css";
-import { Experience } from "./Experience";
+import { Experience } from "./pages/Experience";
+import { Projects } from "./pages/Projects";
 
 export const Row = styled.div`
 	display: flex;
@@ -49,7 +50,7 @@ export function App() {
 					/>
 					<Route path="/about" element={<About />} />
 					<Route path="/experience" element={<Experience />} />
-					{/* <Route path="/projects" element={<Section title="Projects" />} /> */}
+					<Route path="/projects" element={<Projects />} />
 				</Routes>
 			</BrowserRouter>
 		</div>
