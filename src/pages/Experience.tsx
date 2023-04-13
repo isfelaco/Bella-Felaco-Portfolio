@@ -17,7 +17,7 @@ const Row = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-
+	color: #a4778b;
 	font-size: 25px;
 `;
 

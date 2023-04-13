@@ -10,9 +10,18 @@ const Link = styled(NavLink)`
 	letter-spacing: 3px;
 	text-decoration: none;
 
-	animation: fadeIn 3s;
-	transition: 1s;
+	@keyframes growSpace {
+		0% {
+			letter-spacing: 0px;
+		}
+		100% {
+			letter-spacing: 3px;
+		}
+	}
+	letter-spacing: 3px;
+	animation: growSpace 2s;
 
+	transition: 1s;
 	&:hover {
 		letter-spacing: 10px;
 		transition: 0.5s;
