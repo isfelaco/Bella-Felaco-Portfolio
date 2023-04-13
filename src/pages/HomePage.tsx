@@ -15,10 +15,13 @@ export const ColumnLeft = styled.div`
 
 	.title {
 		/* text */
-		color: #aa4586;
+		color: white;
+		text-shadow: 2px 3px 0 #aa4586, 1px 3px 0 #aa4586, 1px 3px 0 #aa4586;
+
 		font-size: 75px;
 		font-style: italic;
 		font-weight: bold;
+		letter-spacing: 3px;
 
 		/* layout */
 		margin-top: -150px;

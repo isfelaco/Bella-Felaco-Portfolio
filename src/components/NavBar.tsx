@@ -4,15 +4,18 @@ import "../css/App.css";
 import styled from "styled-components";
 
 const Link = styled(NavLink)`
+	color: #aa4586;
 	font-size: 75px;
 	font-weight: bold;
 	letter-spacing: 3px;
-	animation: fadeIn 3s;
-	color: #a4778b;
 	text-decoration: none;
 
+	animation: fadeIn 3s;
+	transition: 1s;
+
 	&:hover {
-		font-style: italic;
+		letter-spacing: 10px;
+		transition: 0.5s;
 	}
 `;
 
