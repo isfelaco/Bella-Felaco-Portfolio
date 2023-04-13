@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Section } from "../components/Section";
 
@@ -8,7 +8,7 @@ const Column = styled.div`
 	gap: 25px;
 	justify-content: center;
 	background: rgb(255, 255, 255, 0.3);
-	border: 1px solid #a9ffcb;
+	border: 1px solid white;
 	border-radius: 5px;
 	padding: 25px;
 `;
@@ -17,13 +17,25 @@ const Row = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	// margin: 0px 50px 0px 50px;
+
+	font-size: 25px;
 `;
 
 const Description = styled.p`
 	display: block;
 	text-indent: 50px;
 	text-align: left;
+
+	@keyframes slideIn {
+		0% {
+			max-height: 0;
+		}
+		100% {
+			max-height: 100%;
+		}
+	}
+	overflow: hidden;
+	animation: slideIn 2s;
 `;
 
 export function Experience() {
@@ -37,6 +49,7 @@ export function Experience() {
 						</i>
 						May 2022 - present
 					</Row>
+
 					<Description>
 						Since May of last year, I've worked at the company OpenGov as a
 						software engineer. With the mentorship of{" "}
