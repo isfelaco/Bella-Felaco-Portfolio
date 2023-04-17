@@ -1,24 +1,20 @@
 import React from "react";
 import { Section } from "../components/Section";
 import styled from "styled-components";
+import "../css/App.css";
 import UVAlogo from "../css/UVA-logo.png";
+import { Column, Row } from "../css/SharedStyles";
 
-const Row = styled.div`
-	display: flex;
-	gap: 25px;
-`;
-const Column = styled.div`
-	display: flex;
-	flex-direction: column;
+const AboutColumn = styled(Column)`
 	justify-content: center;
 	background: rgb(255, 255, 255, 0.3);
 	border: 1px solid white;
 	border-radius: 5px;
 `;
-const LeftColumn = styled(Column)`
+const LeftColumn = styled(AboutColumn)`
 	flex: 40%;
 `;
-const RightColumn = styled(Column)`
+const RightColumn = styled(AboutColumn)`
 	flex: 60%;
 `;
 const Image = styled.img`
@@ -36,7 +32,7 @@ const Image = styled.img`
 export function About() {
 	return (
 		<Section title="About">
-			<Row>
+			<Row gap={25}>
 				<LeftColumn>
 					<Image src={UVAlogo} alt="logo" />
 				</LeftColumn>

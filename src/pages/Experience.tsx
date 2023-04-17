@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Section } from "../components/Section";
+import { Column, Row } from "../css/SharedStyles";
 
-const Column = styled.div`
-	display: flex;
-	flex-direction: column;
-	gap: 25px;
+const ExperienceColumn = styled(Column)`
 	justify-content: center;
 	background: rgb(255, 255, 255, 0.3);
 	border: 1px solid white;
@@ -13,12 +11,21 @@ const Column = styled.div`
 	padding: 25px;
 `;
 
-const Row = styled.div`
-	display: flex;
-	flex-direction: row;
+const Title = styled(Row)`
 	justify-content: space-between;
 	color: #a4778b;
 	font-size: 25px;
+	align-items: start;
+`;
+
+const Subtitle = styled.div`
+	flex: 50%;
+	font-size: 20px;
+	text-align: left;
+
+	p {
+		margin: 0;
+	}
 `;
 
 const Description = styled.p`
@@ -41,40 +48,42 @@ const Description = styled.p`
 export function Experience() {
 	return (
 		<Section title="Experience">
-			<Column>
-				<div>
-					<Row>
-						<i>
-							Software Engineer Intern, <b>OpenGov</b>, remote
-						</i>
-						May 2022 - present
-					</Row>
+			<ExperienceColumn>
+				<Title>
+					<i>
+						Software Engineer Intern, <b>OpenGov</b>, remote
+					</i>
+					May 2022 - present
+				</Title>
 
-					<Description>
-						Since May of last year, I've worked at the company OpenGov as a
-						software engineer. With the mentorship of{" "}
-						<a
-							href="http://linkedin.com/in/jennifergoyer"
-							target="_blank"
-							rel="noreferrer"
-						>
-							Jennifer Goyer
-						</a>
-						, I learned to use React, Typescript, and CSS to develop custom UI
-						components. I also gained familiarity with SQLPro and have become
-						very experienced with Git, specifically with Github and more
-						generally with Bitbucket. Last summer, I worked full-time, and
-						continued throughout the school year working 10 hours per week. This
-						summer I will continue my work full-time again.
-					</Description>
-				</div>
-				<div>
-					<Row>
-						<i>
-							Tutor, <b>UVA School of Engineering</b>, Charlottesville, VA
-						</i>
-						September 2021 - May 2022
-					</Row>
+				<Description>
+					Since May of last year, I've worked at the company OpenGov as a
+					software engineer. With the mentorship of{" "}
+					<a
+						href="http://linkedin.com/in/jennifergoyer"
+						target="_blank"
+						rel="noreferrer"
+					>
+						Jennifer Goyer
+					</a>
+					, I learned to use React, Typescript, and CSS to develop custom UI
+					components. I also gained familiarity with SQLPro and have become very
+					experienced with Git, specifically with Github and more generally with
+					Bitbucket. Last summer, I worked full-time, and continued throughout
+					the school year working 10 hours per week. This summer I will continue
+					my work full-time again.
+				</Description>
+			</ExperienceColumn>
+			<Row gap={25}>
+				<ExperienceColumn>
+					<Title>
+						<div>
+							<i>
+								Tutor, <b>UVA School of Engineering</b>, Charlottesville, VA
+							</i>
+						</div>
+						<Subtitle>Sept 2021 - May 2022</Subtitle>
+					</Title>
 					<Description>
 						In fall of last year, I begin tutoring Chemistry for UVA's School of
 						Engineering. It was a learning curve figuring out how to teach
@@ -84,15 +93,17 @@ export function Experience() {
 						computer science, I have become very skilled at debugging and
 						trouble-shooting code quickly.
 					</Description>
-				</div>
-				<div>
-					<Row>
-						<i>
-							Tutor, <b>UVA School of Education, America Reads</b>,
-							Charlottesville, VA
-						</i>
-						September 2021 - May 2022
-					</Row>
+				</ExperienceColumn>
+				<ExperienceColumn>
+					<Title>
+						<Subtitle>
+							<i>
+								Tutor, <b>UVA School of Education, America Reads</b>,
+								Charlottesville, VA
+							</i>
+						</Subtitle>
+						<Subtitle>Sept 2021 - May 2022</Subtitle>
+					</Title>
 					<Description>
 						Last school year I had the pleasure of working at Walker Upper
 						Elementary School in Charlottesville, VA. There I assisted in 5th
@@ -103,8 +114,8 @@ export function Experience() {
 						me a lot of leadership and how to adapt people's learning styles to
 						best help them.
 					</Description>
-				</div>
-			</Column>
+				</ExperienceColumn>
+			</Row>
 		</Section>
 	);
 }

@@ -1,7 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../css/App.css";
 import styled from "styled-components";
+import { Column } from "../css/SharedStyles";
+
+const Nav = styled(Column)`
+	flex: 40%;
+	justify-content: center;
+	text-align: left;
+	gap: 75px;
+`;
 
 const Link = styled(NavLink)`
 	color: #aa4586;
@@ -30,10 +37,10 @@ const Link = styled(NavLink)`
 
 export function NavBar() {
 	return (
-		<nav className="column navbar">
+		<Nav>
 			<Link to="/about">About</Link>
 			<Link to="/experience">Experience</Link>
 			<Link to="/projects">Projects</Link>
-		</nav>
+		</Nav>
 	);
 }
