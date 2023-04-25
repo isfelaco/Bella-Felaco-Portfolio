@@ -10,27 +10,34 @@ const AboutColumn = styled(Column)`
 	background: rgb(255, 255, 255, 0.3);
 	border: 1px solid white;
 	border-radius: 5px;
+	width: 100%;
+	&:hover {
+		border: 0.5px solid #aa4586;
+		background: rgb(255, 255, 255, 0.5);
+	}
 `;
 const LeftColumn = styled(AboutColumn)`
 	flex: 40%;
 	align-items: center;
 	padding: 20px;
-	gap: 50px;
+	gap: 25px;
 `;
-const RightColumn = styled(AboutColumn)`
+const RightColumn = styled(Column)`
 	flex: 60%;
 	align-items: center;
+	gap: 20px;
+`;
+const ColumnRow = styled(AboutColumn)`
+	align-items: center;
+	height: 50%;
+	h1 {
+		margin: 0;
+	}
 `;
 const Image = styled.img`
 	width: 75%;
 	height: auto;
-	transition: 2s;
 	align-self: center;
-
-	&:hover {
-		width: 90%;
-		transition: 1s;
-	}
 `;
 
 const EmailForm = styled.form`
@@ -43,6 +50,7 @@ const EmailForm = styled.form`
 	h4 {
 		margin: 0;
 	}
+	textarea,
 	input:not(:nth-last-child(2)) {
 		opacity: 0.25;
 		border: 1px solid gray;
@@ -59,7 +67,8 @@ const EmailForm = styled.form`
 	}
 `;
 
-const EmailInput = styled.input`
+const EmailInput = styled.textarea`
+	resize: none;
 	height: 100px;
 `;
 
@@ -68,7 +77,8 @@ const Button = styled.a`
 	border-radius: 5px;
 	padding: 5px 10px 5px 10px;
 	color: white;
-	background: #aa4586;
+	background: #a4778b;
+	width: 200px;
 `;
 
 export function About() {
@@ -79,7 +89,7 @@ export function About() {
 		const msg = event.target[1].value;
 		if (emailRef.current) {
 			emailRef.current.href =
-				"mailto:ifelaco@opengov.com?subject=" + subj + "&body=" + msg;
+				"mailto:isf4rjk@virginia.edu?subject=" + subj + "&body=" + msg;
 			emailRef.current.click();
 		}
 	};
@@ -94,7 +104,7 @@ export function About() {
 						<h4>Subject</h4>
 						<input type="text" />
 						<h4>Message</h4>
-						<EmailInput type="text" />
+						<EmailInput />
 						<input type="submit" />
 						<a ref={emailRef} href=" " hidden>
 							{" "}
@@ -102,7 +112,7 @@ export function About() {
 					</EmailForm>
 				</LeftColumn>
 				<RightColumn>
-					<div>
+					<ColumnRow>
 						<h1>Contact</h1>
 						<p>isf4rjk@virginia.edu</p>
 						<p>(508) 507-1856</p>
@@ -113,14 +123,13 @@ export function About() {
 						>
 							View LinkedIn
 						</Button>
-					</div>
-					<div>
+					</ColumnRow>
+					<ColumnRow>
 						<h1>Education</h1>
 						<p>University of Virgina, Charlottesville, VA</p>
 						<i>2020-2024</i>
 						<p>Bachelor of Science in Computer Science</p>
-					</div>
-					<div></div>
+					</ColumnRow>
 				</RightColumn>
 			</Row>
 		</Section>
