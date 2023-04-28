@@ -1,5 +1,5 @@
 @font-face {
-	font-family: myFirstFont;
+	font-family: myFont;
 	src: url(SpaceGrotesk.ttf);
 }
 
@@ -13,7 +13,7 @@
 	height: 100vh;
 
 	/* font */
-	font-family: myFirstFont;
+	font-family: myFont;
 	text-align: center;
 }
 

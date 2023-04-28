@@ -4,6 +4,8 @@ import styled from "styled-components";
 import "../css/App.css";
 import UVAlogo from "../css/UVA-logo.png";
 import { Column, Row } from "../css/SharedStyles";
+import { EmailModal } from "../components/Email";
+import emailjs from "emailjs-com";
 
 const AboutColumn = styled(Column)`
 	justify-content: center;
@@ -47,29 +49,26 @@ const EmailForm = styled.form`
 	width: 300px;
 	gap: 10px;
 
+	h2,
 	h4 {
 		margin: 0;
 	}
 	textarea,
-	input:not(:nth-last-child(2)) {
-		opacity: 0.25;
-		border: 1px solid gray;
+	input:not(last-child) {
+		border: 1px solid white;
 		border-radius: 5px;
 		width: 100%;
+		background-color: rgb(255, 255, 255, 0.3);
+		font-family: myFont;
 	}
-	input:nth-last-child(2) {
+	input:last-child {
 		color: #aa4586;
 		font-weight: bold;
 		background: transparent;
 		width: 100px;
-		border: 1px solid gray;
+		border: 1px solid white;
 		border-radius: 5px;
 	}
-`;
-
-const EmailInput = styled.textarea`
-	resize: none;
-	height: 100px;
 `;
 
 const Button = styled.a`
@@ -82,34 +81,40 @@ const Button = styled.a`
 `;
 
 export function About() {
-	const emailRef = useRef<HTMLAnchorElement>(null);
-	const sendEmail = (event: any) => {
-		event.preventDefault();
-		const subj = event.target[0].value;
-		const msg = event.target[1].value;
-		if (emailRef.current) {
-			emailRef.current.href =
-				"mailto:isf4rjk@virginia.edu?subject=" + subj + "&body=" + msg;
-			emailRef.current.click();
-		}
-	};
+	emailjs.init("iu8xABUMxkhOBMJVM");
+
+	function sendEmail(e: any) {
+		e.preventDefault();
+		e.target.value = (Math.random() * 100000) | 0;
+		emailjs.sendForm("contact_service", "contact_form", e.target).then(
+			(result) => {
+				console.log(result.text);
+			},
+			(error) => {
+				console.log(error.text);
+			}
+		);
+	}
 
 	return (
 		<Section title="About">
 			<Row gap={25}>
 				<LeftColumn>
 					<Image src={UVAlogo} alt="logo" />
-					<EmailForm onSubmit={sendEmail} id="myForm">
-						<h2>Send an Email</h2>
-						<h4>Subject</h4>
-						<input type="text" />
-						<h4>Message</h4>
-						<EmailInput />
-						<input type="submit" />
-						<a ref={emailRef} href=" " hidden>
-							{" "}
-						</a>
+					<EmailForm id="contact-form" onSubmit={sendEmail}>
+						<h2>Send Email</h2>
+						<input type="hidden" name="contact_number" />
+						<label>Name</label>
+						<input type="text" name="from_name" />
+						<label>Email</label>
+						<input type="email" name="reply_to" />
+						<label>Subject</label>
+						<input type="text" name="subject"></input>
+						<label>Message</label>
+						<textarea name="message"></textarea>
+						<input type="submit" value="Send" />
 					</EmailForm>
+					{/* <div dangerouslySetInnerHTML={{ __html: EmailModal }} /> */}
 				</LeftColumn>
 				<RightColumn>
 					<ColumnRow>

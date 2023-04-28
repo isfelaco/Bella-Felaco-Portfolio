@@ -12,7 +12,7 @@ const Button = styled.button`
 	cursor: pointer;
 
 	color: #aa4586;
-	font-family: myFirstFont;
+	font-family: myFont;
 	font-weight: bold;
 	font-size: 20px;
 	text-transform: uppercase;
