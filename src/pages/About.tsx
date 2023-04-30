@@ -4,7 +4,6 @@ import styled from "styled-components";
 import "../css/App.css";
 import UVAlogo from "../css/UVA-logo.png";
 import { Column, Row } from "../css/SharedStyles";
-import { EmailModal } from "../components/Email";
 import emailjs from "emailjs-com";
 
 const AboutColumn = styled(Column)`
@@ -69,6 +68,11 @@ const EmailForm = styled.form`
 		border: 1px solid white;
 		border-radius: 5px;
 	}
+	textarea {
+		height: 50px;
+		max-height: 100px;
+		resize: vertical;
+	}
 `;
 
 const Button = styled.a`
@@ -114,7 +118,6 @@ export function About() {
 						<textarea name="message"></textarea>
 						<input type="submit" value="Send" />
 					</EmailForm>
-					{/* <div dangerouslySetInnerHTML={{ __html: EmailModal }} /> */}
 				</LeftColumn>
 				<RightColumn>
 					<ColumnRow>

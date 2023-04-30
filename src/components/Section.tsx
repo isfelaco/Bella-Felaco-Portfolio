@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { BackButton } from "./BackButton";
+import { Button, ButtonRow } from "./Buttons";
 import "../css/App.css";
 import styled from "styled-components";
 import { Column } from "../css/SharedStyles";
@@ -23,17 +23,28 @@ const Subpage = styled(Column)`
 	animation: fadeIn 1s;
 `;
 
-export const PageTitle = styled.p`
+export const Header = styled.div`
+	background: rgb(255, 255, 255, 0.3);
+	border: 1px solid white;
+	border-radius: 5px;
+
+	height: fit-content;
+	padding: 10px;
+	display: grid;
+	grid-auto-columns: minmax(0, 1fr);
+	grid-auto-flow: column;
+	align-items: center;
+`;
+
+const PageTitle = styled.p`
 	color: #aa4586;
 	font-size: 50px;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 3px;
+	margin: 0;
+	line-height: 100%;
 
-	background: rgb(255, 255, 255, 0.3);
-	border-radius: 5px;
-	border: 1px solid white;
-	margin: 0px;
 	transition: 1s;
 
 	&:hover {
@@ -46,11 +57,15 @@ export function Section(props: Props) {
 	const { title, children } = props;
 	return (
 		<Subpage gap={25}>
-			<PageTitle>{title}</PageTitle>
+			<Header>
+				<Button to="/" text="Home" float="left" />
+				<PageTitle>{title}</PageTitle>
+				<ButtonRow align="right">
+					<Button to="/" text="Back" />
+					<Button to="/" text="Next" />
+				</ButtonRow>
+			</Header>
 			{children}
-			<div>
-				<BackButton />
-			</div>
 		</Subpage>
 	);
 }
