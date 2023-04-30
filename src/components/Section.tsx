@@ -3,6 +3,8 @@ import { Button, ButtonRow } from "./Buttons";
 import "../css/App.css";
 import styled from "styled-components";
 import { Column } from "../css/SharedStyles";
+import { pages } from "../App";
+import { HomePage } from "../pages/HomePage";
 
 type Props = {
 	title: string;
@@ -55,14 +57,27 @@ const PageTitle = styled.p`
 
 export function Section(props: Props) {
 	const { title, children } = props;
+	var backIndex: number = 0;
+	var forwardIndex: number = 0;
+	Object.keys(pages).find((route, i) => {
+		if (route === window.location.pathname) {
+			backIndex = i - 1;
+			forwardIndex = i + 1;
+		}
+	});
+	const back = backIndex > 0;
+	const next = forwardIndex < Object.keys(pages).length;
+	const lastPage = Object.keys(pages)[backIndex];
+	const nextPage = Object.keys(pages)[forwardIndex];
+
 	return (
 		<Subpage gap={25}>
 			<Header>
 				<Button to="/" text="Home" float="left" />
 				<PageTitle>{title}</PageTitle>
 				<ButtonRow align="right">
-					<Button to="/" text="Back" />
-					<Button to="/" text="Next" />
+					<>{back && <Button to={lastPage} text="Back" />}</>
+					<>{next && <Button to={nextPage} text="Next" />}</>
 				</ButtonRow>
 			</Header>
 			{children}
