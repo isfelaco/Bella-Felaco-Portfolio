@@ -12,7 +12,6 @@ const ExperienceColumn = styled(Column)`
 `;
 
 const Title = styled.div`
-	// color: #c46ea6;
 	font-size: 25px;
 	display: flex;
 	justify-content: space-between;

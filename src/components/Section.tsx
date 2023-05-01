@@ -73,11 +73,11 @@ export function Section(props: Props) {
 	return (
 		<Subpage gap={25}>
 			<Header>
-				<Button to="/" text="Home" float="left" />
+				<Button style="white" to="/" text="Home" float="left" />
 				<PageTitle>{title}</PageTitle>
 				<ButtonRow align="right">
-					<>{back && <Button to={lastPage} text="Back" />}</>
-					<>{next && <Button to={nextPage} text="Next" />}</>
+					<>{back && <Button style="white" to={lastPage} text="Back" />}</>
+					<>{next && <Button style="white" to={nextPage} text="Next" />}</>
 				</ButtonRow>
 			</Header>
 			{children}
