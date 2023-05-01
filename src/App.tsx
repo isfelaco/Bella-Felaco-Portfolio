@@ -18,8 +18,8 @@ export function App() {
 		<div className="App">
 			<BrowserRouter>
 				<Routes>
-					{Object.entries(pages).map(([route, element]) => (
-						<Route path={route} element={element} />
+					{Object.entries(pages).map(([route, element], i) => (
+						<Route path={route} element={element} key={i} />
 					))}
 				</Routes>
 			</BrowserRouter>
