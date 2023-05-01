@@ -1,5 +1,5 @@
 @font-face {
-	font-family: myFirstFont;
+	font-family: myFont;
 	src: url(SpaceGrotesk.ttf);
 }
 
@@ -10,56 +10,14 @@
 	/* layout */
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	min-height: 100vh;
 
 	/* font */
-	font-family: myFirstFont;
+	font-family: myFont;
 	text-align: center;
 }
 
 html {
 	scroll-behavior: smooth;
 	scroll-padding-top: 175px;
-}
-
-@keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-.column {
-	display: flex;
-	flex-direction: column;
-}
-
-.navbar {
-	flex: 40%;
-	justify-content: center;
-	text-align: left;
-	gap: 50px;
-}
-
-.section {
-	/* layout */
-	display: flex;
-	flex-direction: column;
-	gap: 25px;
-	margin: 25px;
-
-	animation: fadeIn 1s;
-}
-
-.pageTitle {
-	margin: 0px;
-	color: #a4778b;
-	font-size: 50px;
-	font-weight: bold;
-	text-transform: uppercase;
-	background: rgb(255, 255, 255, 0.3);
-	border-radius: 5px;
-	border: 1px solid #a9ffcb;
 }
