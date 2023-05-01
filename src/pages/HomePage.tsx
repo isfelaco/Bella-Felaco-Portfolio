@@ -5,7 +5,7 @@ import { Column } from "../css/SharedStyles";
 
 export const Page = styled.div`
 	display: flex;
-	height: 100%;
+	height: 100vh;
 `;
 export const ColumnLeft = styled(Column)`
 	flex: 60%;
