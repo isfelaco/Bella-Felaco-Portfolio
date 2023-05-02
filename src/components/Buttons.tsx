@@ -2,9 +2,8 @@ import React, { ReactElement } from "react";
 import styled from "styled-components";
 import "../css/App.css";
 
-const WhiteButton = styled.button<{ float: string | undefined }>`
+const WhiteButton = styled.button<{ float?: string | undefined }>`
 	background-color: rgb(255, 255, 255, 0.5);
-	border: none;
 	border: 0.25px solid white;
 	border-radius: 5px;
 	height: 50px;
@@ -43,17 +42,19 @@ type ButtonProps = {
 
 export function Button({ style, to, text, float }: ButtonProps) {
 	return (
-		<a href={to} target={style === "white" ? "_self" : "_blank"}>
-			{style === "white" ? (
-				<WhiteButton float={float}>{text}</WhiteButton>
-			) : (
-				<PinkButton>{text}</PinkButton>
-			)}
-		</a>
+		<div>
+			<a href={to} target={style === "white" ? "_self" : "_blank"}>
+				{style === "white" ? (
+					<WhiteButton float={float}>{text}</WhiteButton>
+				) : (
+					<PinkButton>{text}</PinkButton>
+				)}
+			</a>
+		</div>
 	);
 }
 
-const ButtonContainer = styled.div<{ align: string | undefined }>`
+const ButtonContainer = styled.div<{ align?: string | undefined }>`
 	display: flex;
 	gap: 20px;
 	justify-content: ${({ align }) => align};
