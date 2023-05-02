@@ -53,15 +53,21 @@ export function Projects() {
 					</p>
 				</ProjectsColumn>
 			</Row>
-			<ProjectsColumn>
-				<h1>Personal Website</h1>
-				<i>Made in 2023</i>
-				<p>
-					I created this website for an art student in order to display her work
-					as a personal portfolio. I utilized React TSX and EmailJS.
-				</p>
-				{/* include completed link here */}
-			</ProjectsColumn>
+			<Row gap={20}>
+				<ProjectsColumn>
+					<h1>Personal Website</h1>
+					<i>Made in 2023</i>
+					<p>
+						I created this website for an art student in order to display her
+						work as a personal portfolio. I utilized React TSX and EmailJS.
+					</p>
+					{/* include completed link here */}
+				</ProjectsColumn>
+				<ProjectsColumn>
+					<h1>Study Buddy Web Application</h1>
+					<i>Made for course project in 2022</i>
+				</ProjectsColumn>
+			</Row>
 		</Section>
 	);
 }

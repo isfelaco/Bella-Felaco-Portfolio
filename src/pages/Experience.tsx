@@ -33,17 +33,7 @@ const Description = styled.p`
 	display: block;
 	text-indent: 50px;
 	text-align: left;
-
-	@keyframes slideIn {
-		0% {
-			max-height: 0;
-		}
-		100% {
-			max-height: 100%;
-		}
-	}
-	overflow: hidden;
-	animation: slideIn 2s;
+	line-height: 25px;
 `;
 
 export function Experience() {
@@ -56,10 +46,10 @@ export function Experience() {
 					</i>
 					<p>May 2022 - present</p>
 				</Title>
-
 				<Description>
 					Since May of last year, I've worked at the company OpenGov as a
-					software engineer. With the mentorship of{" "}
+					software engineer for the R&D Permitting and Licensing division. With
+					the mentorship of{" "}
 					<a
 						href="http://linkedin.com/in/jennifergoyer"
 						target="_blank"
@@ -72,7 +62,8 @@ export function Experience() {
 					experienced with Git, specifically with Github and more generally with
 					Bitbucket. Last summer, I worked full-time, and continued throughout
 					the school year working 10 hours per week. This summer I will continue
-					my work full-time again.
+					my work full-time again. I look forward to learning more about backend
+					development and becoming more proficient in SQLPro.
 				</Description>
 			</ExperienceColumn>
 			<Row gap={25}>
@@ -83,7 +74,6 @@ export function Experience() {
 						</i>
 						<p>Sept 2021 - May 2022</p>
 					</Subtitle>
-
 					<Description>
 						In fall of last year, I begin tutoring Chemistry for UVA's School of
 						Engineering. It was a learning curve figuring out how to teach
