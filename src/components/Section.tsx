@@ -4,7 +4,6 @@ import "../css/App.css";
 import styled from "styled-components";
 import { Column } from "../css/SharedStyles";
 import { pages } from "../App";
-import { HomePage } from "../pages/HomePage";
 
 type Props = {
 	title: string;
@@ -77,12 +76,14 @@ export function Section(props: Props) {
 	return (
 		<Subpage gap={25}>
 			<Header>
-				<Button style="white" to="/" text="Home" float="left" />
-				<PageTitle>{title}</PageTitle>
-				<ButtonRow align="right">
+				<ButtonRow align="left">
+					<Button style="white" to="/" text="Home" />
 					<>{back && <Button style="white" to={lastPage} text="Back" />}</>
-					<>{next && <Button style="white" to={nextPage} text="Next" />}</>
 				</ButtonRow>
+				<PageTitle className="tooltip">{title}</PageTitle>
+				{next && (
+					<Button style="white" to={nextPage} text="Next" float="right" />
+				)}
 			</Header>
 			{children}
 		</Subpage>
