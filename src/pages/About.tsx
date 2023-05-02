@@ -5,6 +5,7 @@ import "../css/App.css";
 import UVAlogo from "../css/UVA-logo.png";
 import { Column, Row } from "../css/SharedStyles";
 import emailjs from "emailjs-com";
+import { Button } from "../components/Buttons";
 
 const AboutColumn = styled(Column)`
 	justify-content: center;
@@ -12,6 +13,7 @@ const AboutColumn = styled(Column)`
 	border: 1px solid white;
 	border-radius: 5px;
 	width: 100%;
+	align-items: center;
 	&:hover {
 		border: 0.5px solid #aa4586;
 		background: rgb(255, 255, 255, 0.5);
@@ -19,7 +21,6 @@ const AboutColumn = styled(Column)`
 `;
 const LeftColumn = styled(AboutColumn)`
 	flex: 40%;
-	align-items: center;
 	padding: 20px;
 	gap: 25px;
 `;
@@ -29,8 +30,10 @@ const RightColumn = styled(Column)`
 	gap: 20px;
 `;
 const ColumnRow = styled(AboutColumn)`
-	align-items: center;
 	height: 50%;
+	display: flex;
+	gap: 20px;
+	p,
 	h1 {
 		margin: 0;
 	}
@@ -75,15 +78,6 @@ const EmailForm = styled.form`
 	}
 `;
 
-const Button = styled.a`
-	border: 1px solid white;
-	border-radius: 5px;
-	padding: 5px 10px 5px 10px;
-	color: white;
-	background: #a4778b;
-	width: 200px;
-`;
-
 export function About() {
 	emailjs.init("iu8xABUMxkhOBMJVM");
 
@@ -125,12 +119,10 @@ export function About() {
 						<p>isf4rjk@virginia.edu</p>
 						<p>(508) 507-1856</p>
 						<Button
-							href="http://linkedin.com/in/isabella-felaco"
-							target="_blank"
-							rel="noreferrer"
-						>
-							View LinkedIn
-						</Button>
+							style="pink"
+							to="http://linkedin.com/in/isabella-felaco"
+							text="View Linkedin"
+						/>
 					</ColumnRow>
 					<ColumnRow>
 						<h1>Education</h1>

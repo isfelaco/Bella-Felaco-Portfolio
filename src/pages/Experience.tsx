@@ -11,38 +11,29 @@ const ExperienceColumn = styled(Column)`
 	padding: 25px;
 `;
 
-const Title = styled(Row)`
-	justify-content: space-between;
-	color: #a4778b;
+const Title = styled.div`
 	font-size: 25px;
-	align-items: start;
-`;
-
-const Subtitle = styled.div`
-	flex: 50%;
-	font-size: 20px;
-	text-align: left;
-
+	display: flex;
+	justify-content: space-between;
+	i {
+		text-align: left;
+	}
 	p {
+		width: 50%;
+		text-align: right;
 		margin: 0;
 	}
+`;
+
+const Subtitle = styled(Title)`
+	font-size: 20px;
 `;
 
 const Description = styled.p`
 	display: block;
 	text-indent: 50px;
 	text-align: left;
-
-	@keyframes slideIn {
-		0% {
-			max-height: 0;
-		}
-		100% {
-			max-height: 100%;
-		}
-	}
-	overflow: hidden;
-	animation: slideIn 2s;
+	line-height: 25px;
 `;
 
 export function Experience() {
@@ -53,12 +44,12 @@ export function Experience() {
 					<i>
 						Software Engineer Intern, <b>OpenGov</b>, remote
 					</i>
-					May 2022 - present
+					<p>May 2022 - present</p>
 				</Title>
-
 				<Description>
 					Since May of last year, I've worked at the company OpenGov as a
-					software engineer. With the mentorship of{" "}
+					software engineer for the R&D Permitting and Licensing division. With
+					the mentorship of{" "}
 					<a
 						href="http://linkedin.com/in/jennifergoyer"
 						target="_blank"
@@ -71,19 +62,18 @@ export function Experience() {
 					experienced with Git, specifically with Github and more generally with
 					Bitbucket. Last summer, I worked full-time, and continued throughout
 					the school year working 10 hours per week. This summer I will continue
-					my work full-time again.
+					my work full-time again. I look forward to learning more about backend
+					development and becoming more proficient in SQLPro.
 				</Description>
 			</ExperienceColumn>
 			<Row gap={25}>
 				<ExperienceColumn>
-					<Title>
-						<div>
-							<i>
-								Tutor, <b>UVA School of Engineering</b>, Charlottesville, VA
-							</i>
-						</div>
-						<Subtitle>Sept 2021 - May 2022</Subtitle>
-					</Title>
+					<Subtitle>
+						<i>
+							Tutor, <b>UVA School of Engineering</b>, Charlottesville, VA
+						</i>
+						<p>Sept 2021 - May 2022</p>
+					</Subtitle>
 					<Description>
 						In fall of last year, I begin tutoring Chemistry for UVA's School of
 						Engineering. It was a learning curve figuring out how to teach
@@ -95,15 +85,13 @@ export function Experience() {
 					</Description>
 				</ExperienceColumn>
 				<ExperienceColumn>
-					<Title>
-						<Subtitle>
-							<i>
-								Tutor, <b>UVA School of Education, America Reads</b>,
-								Charlottesville, VA
-							</i>
-						</Subtitle>
-						<Subtitle>Sept 2021 - May 2022</Subtitle>
-					</Title>
+					<Subtitle>
+						<i>
+							Tutor, <b>UVA School of Education, America Reads</b>,
+							Charlottesville, VA
+						</i>
+						<p>Sept 2021 - May 2022</p>
+					</Subtitle>
 					<Description>
 						Last school year I had the pleasure of working at Walker Upper
 						Elementary School in Charlottesville, VA. There I assisted in 5th

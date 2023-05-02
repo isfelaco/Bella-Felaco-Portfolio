@@ -4,7 +4,6 @@ import "../css/App.css";
 import styled from "styled-components";
 import { Column } from "../css/SharedStyles";
 import { pages } from "../App";
-import { HomePage } from "../pages/HomePage";
 
 type Props = {
 	title: string;
@@ -46,13 +45,17 @@ const PageTitle = styled.p`
 	letter-spacing: 3px;
 	margin: 0;
 	line-height: 100%;
+	letter-spacing: 10px;
 
-	transition: 1s;
-
-	&:hover {
-		letter-spacing: 10px;
-		transition: 0.5s;
+	@keyframes letterSpace {
+		0% {
+			letter-spacing: 0px;
+		}
+		100% {
+			letter-spacing: 10px;
+		}
 	}
+	animation: letterSpace 1s;
 `;
 
 export function Section(props: Props) {
@@ -73,12 +76,16 @@ export function Section(props: Props) {
 	return (
 		<Subpage gap={25}>
 			<Header>
-				<Button to="/" text="Home" float="left" />
-				<PageTitle>{title}</PageTitle>
-				<ButtonRow align="right">
-					<>{back && <Button to={lastPage} text="Back" />}</>
-					<>{next && <Button to={nextPage} text="Next" />}</>
+				<ButtonRow align="left">
+					<Button style="white" to="/" text="Home" />
+					<>{back && <Button style="white" to={lastPage} text="Back" />}</>
 				</ButtonRow>
+				<PageTitle className="tooltip">{title}</PageTitle>
+				{next ? (
+					<Button style="white" to={nextPage} text="Next" float="right" />
+				) : (
+					<div></div>
+				)}
 			</Header>
 			{children}
 		</Subpage>
