@@ -81,8 +81,10 @@ export function Section(props: Props) {
 					<>{back && <Button style="white" to={lastPage} text="Back" />}</>
 				</ButtonRow>
 				<PageTitle className="tooltip">{title}</PageTitle>
-				{next && (
+				{next ? (
 					<Button style="white" to={nextPage} text="Next" float="right" />
+				) : (
+					<div></div>
 				)}
 			</Header>
 			{children}
