@@ -46,13 +46,17 @@ const PageTitle = styled.p`
 	letter-spacing: 3px;
 	margin: 0;
 	line-height: 100%;
+	letter-spacing: 10px;
 
-	transition: 1s;
-
-	&:hover {
-		letter-spacing: 10px;
-		transition: 0.5s;
+	@keyframes letterSpace {
+		0% {
+			letter-spacing: 0px;
+		}
+		100% {
+			letter-spacing: 10px;
+		}
 	}
+	animation: letterSpace 1s;
 `;
 
 export function Section(props: Props) {
