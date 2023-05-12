@@ -21,8 +21,8 @@ const AboutColumn = styled(Column)`
 `;
 const LeftColumn = styled(AboutColumn)`
 	flex: 40%;
-	padding: 20px;
-	gap: 25px;
+	padding: 40px;
+	gap: 30px;
 `;
 const RightColumn = styled(Column)`
 	flex: 60%;
@@ -47,21 +47,32 @@ const Image = styled.img`
 const EmailForm = styled.form`
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	width: 300px;
+	width: 75%;
 	gap: 10px;
+
+	border: 1px solid white;
+	border-radius: 20px;
+	padding: 20px;
+	background-color: rgb(219, 169, 201, 0.6);
+	color: white;
 
 	h2,
 	h4 {
 		margin: 0;
 	}
+	label {
+		text-align: left;
+	}
 	textarea,
 	input:not(last-child) {
-		border: 1px solid white;
-		border-radius: 5px;
+		border: none;
+		border-bottom: 1px solid white;
+		background: none;
 		width: 100%;
-		background-color: rgb(255, 255, 255, 0.3);
 		font-family: myFont;
+		&:focus {
+			outline: none;
+		}
 	}
 	input:last-child {
 		color: #aa4586;
@@ -70,11 +81,14 @@ const EmailForm = styled.form`
 		width: 100px;
 		border: 1px solid white;
 		border-radius: 5px;
+		align-self: center;
 	}
 	textarea {
 		height: 50px;
 		max-height: 100px;
 		resize: vertical;
+		border: 1px solid white;
+		border-radius: 5px;
 	}
 `;
 
@@ -106,8 +120,6 @@ export function About() {
 						<input type="text" name="from_name" />
 						<label>Email</label>
 						<input type="email" name="reply_to" />
-						<label>Subject</label>
-						<input type="text" name="subject"></input>
 						<label>Message</label>
 						<textarea name="message"></textarea>
 						<input type="submit" value="Send" />
