@@ -16,7 +16,7 @@ export const pages: { [id: string]: ReactElement } = {
 export function App() {
 	return (
 		<div className="App">
-			<BrowserRouter>
+			<BrowserRouter basename="Bella-Felaco-Porfolio">
 				<Routes>
 					{Object.entries(pages).map(([route, element], i) => (
 						<Route path={route} element={element} key={i} />
