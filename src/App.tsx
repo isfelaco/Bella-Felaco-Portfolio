@@ -7,10 +7,10 @@ import { Projects } from "./pages/Projects";
 import "./css/App.css";
 
 export const pages: { [id: string]: ReactElement } = {
+	"/": <HomePage />,
 	"/about": <About />,
 	"/experience": <Experience />,
 	"/projects": <Projects />,
-	"/": <HomePage />,
 };
 
 export function App() {
